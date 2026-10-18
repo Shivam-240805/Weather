@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App | Live Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="brand-icon">☀️</div>
+
+            <div>
+                <h1>Weather<span>App</span></h1>
+                <p>Live weather. Anytime, anywhere.</p>
+            </div>
+        </header>
+
+        <!-- Search -->
+        <section class="search-section">
+            <div class="search-box">
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name..."
+                    aria-label="Enter city name"
+                    autocomplete="off"
+                >
+
+                <button id="searchBtn" type="button">
+                    Search <span>→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Weather Dashboard -->
+        <section id="weather" class="weather-card">
+
+            <div class="weather-top">
+                <div>
+                    <p class="eyebrow">CURRENT WEATHER</p>
+                    <h2 id="cityName"></h2>
+                </div>
+
+                <div class="live-badge">
+                    <span class="live-dot"></span>
+                    LIVE
+                </div>
+            </div>
+
+            <!-- Main Weather -->
+            <div class="main-weather">
+
+                <div class="temperature-block">
+                    <p id="description" class="weather-description">
+                        Search for a city
+                    </p>
+
+                    <h3 id="temperature" class="temperature">--°C</h3>
+
+                    <p id="feelsLike" class="feels-like">
+                        Feels like: --°C
+                    </p>
+                </div>
+
+                <div class="weather-visual">
+                    <img
+                        id="weatherIcon"
+                        src=""
+                        alt="Weather icon"
+                    >
+                </div>
+
+            </div>
+
+            <!-- Weather Details -->
+            <div class="details-grid">
+
+                <article class="detail-card">
+                    <div class="detail-heading">
+                        <span class="detail-icon humidity-icon">◉</span>
+                        <span>Humidity</span>
+                    </div>
+                    <p id="humidity" class="detail-value">--%</p>
+                    <p class="detail-subtitle">Moisture in air</p>
+                </article>
+
+                <article class="detail-card">
+                    <div class="detail-heading">
+                        <span class="detail-icon wind-icon">≋</span>
+                        <span>Wind speed</span>
+                    </div>
+                    <p id="wind" class="detail-value">-- m/s</p>
+                    <p class="detail-subtitle">Current wind</p>
+                </article>
+
+            </div>
+
+            <div class="card-footer">
+                <span class="footer-dot"></span>
+                Weather information powered by OpenWeather
+            </div>
+
+        </section>
+
+        <footer class="page-footer">
+            Made with <span>♥</span> for weather lovers
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
